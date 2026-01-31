@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ ! -f build/ttysniff ]
+then
+    bin/build
+fi
+
+
+if [ ! -f build/ttysniff ]
+then
+    echo "WARNING: Can't find build/ttysniff!"
+    exit 1
+fi
+
+
+echo "Copying build/ttysniff ~/bin"
+cp build/ttysniff ~/bin
+
