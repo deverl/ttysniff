@@ -385,7 +385,7 @@ int main( int argc, char *argv[] )
     FILE *binfile=NULL;
     int stdin_fileno, fd;
     unsigned char databyte;
-    int count;
+    // int count;
     fd_set read_fds;
     int max_fd;
     struct termios stdin_tios;
@@ -419,7 +419,7 @@ int main( int argc, char *argv[] )
 //    write( fd, "scan var print\r\n", 16 );
 
     setbuf( stdout, NULL );
-    count = 0;
+    // count = 0;
     stdin_fileno = fileno(stdin);
     while( !main_quit ) {
 
@@ -501,7 +501,7 @@ int main( int argc, char *argv[] )
             }
         }
 
-        count++;
+        // count++;
     }
 
     close( fd );
